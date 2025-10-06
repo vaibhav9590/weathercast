@@ -1,0 +1,129 @@
+/* style.css - Light Sky Blue Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Changed: Dark blue text color for contrast */
+    color: #002244;
+    /* Changed: Default light blue background */
+    background: linear-gradient(to top, #a1c4fd, #c2e9fb);
+    transition: background 1s ease-in-out;
+}
+
+.container {
+    /* Changed: Brighter, semi-transparent background */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#indianClock {
+    font-size: 1.1rem;
+    color: #002244;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    padding: 12px 15px;
+    width: 70%;
+    border-radius: 25px;
+    border: 1px solid #bdc3c7;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+    /* Changed: Focus color to a clear blue */
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    /* Changed: New sky blue button color */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    /* Changed: Darker blue for hover */
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+#weatherResult {
+    margin-top: 25px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#weatherResult.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weather-header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.weather-header img {
+    width: 80px;
+    height: 80px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.weather-details p {
+    margin: 5px 0;
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
